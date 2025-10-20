@@ -1,0 +1,134 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #4B0082;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #FFC107;
+}
+
+.hero {
+    background: linear-gradient(135deg, #1E90FF, #4B0082);
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#services {
+    background-color: #4B0082;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#services h2 {
+    color: #FFD700;
+    margin-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #1E90FF;
+    padding: 25px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+#about {
+    background-color: #1E90FF;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    color: #FFD700;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+#contact {
+    background-color: #4B0082;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #FFD700;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact input, #contact textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+#contact button {
+    background-color: #FFD700;
+    color: #4B0082;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#contact button:hover {
+    background-color: #FFC107;
+}
+
+footer {
+    background-color: #1E90FF;
+    text-align: center;
+    padding: 20px;
+}
