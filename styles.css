@@ -1,22 +1,109 @@
-body { font-family: 'Open Sans', sans-serif; margin:0; padding:0; background-color:#f5f5f5; color:#fff; }
-.btn { display:inline-block; background-color:#FFD700; color:#4B0082; padding:12px 25px; border-radius:5px; text-decoration:none; font-weight:bold; transition:0.3s; }
-.btn:hover { background-color:#FFC107; }
-.hero { background:linear-gradient(135deg,#1E90FF,#4B0082); text-align:center; padding:150px 20px; }
-.hero h1 { font-family:'Montserrat',sans-serif; font-size:50px; margin-bottom:10px; }
-.hero p { font-size:20px; margin-bottom:20px; }
-.logo { width:150px; height:auto; display:block; margin:0 auto 20px; }
-#services { background-color:#4B0082; padding:80px 20px; text-align:center; }
-#services h2 { color:#FFD700; margin-bottom:50px; font-family:'Montserrat',sans-serif; }
-.services-container { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
-.service-card { background-color:#1E90FF; padding:25px; border-radius:10px; width:250px; transition:transform 0.3s; }
-.service-card:hover { transform:scale(1.05); }
-.service-card img { width:60px; margin-bottom:15px; }
-#about { background-color:#1E90FF; padding:80px 20px; text-align:center; }
-#about h2 { color:#FFD700; font-family:'Montserrat',sans-serif; margin-bottom:20px; }
-#contact { background-color:#4B0082; padding:80px 20px; text-align:center; }
-#contact h2 { color:#FFD700; margin-bottom:40px; font-family:'Montserrat',sans-serif; }
-#contact form { max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px; }
-#contact input, #contact textarea { padding:12px; border:none; border-radius:5px; }
-#contact button { background-color:#FFD700; color:#4B0082; border:none; padding:15px; font-weight:bold; cursor:pointer; border-radius:5px; transition:0.3s; }
-#contact button:hover { background-color:#FFC107; }
-footer { background-color:#1E90FF; text-align:center; padding:20px; }
+:root{
+  --bg:#f5f5f5; /* from body background */
+  --card:#1E90FF; /* service-card and about section */
+  --accent:#FFD700; /* buttons, headings */
+  --accent-2:#4B0082; /* gradients and hero background */
+  --muted:#fff; /* general text color */
+  --text:#fff; /* primary text color */
+  --success:#28a745;
+  --danger:#e55353;
+  --radius:10px;
+  --max-width:1100px;
+}
+
+/* Reset & body */
+*{box-sizing:border-box;}
+html, body{height:100%;}
+body{
+  margin:0;
+  font-family:'Open Sans', sans-serif;
+  background-color:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* Containers & layout */
+.container{max-width:var(--max-width);margin:0 auto;padding:28px;}
+.header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+.brand{display:flex;gap:14px;align-items:center;}
+.brand svg{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent-2),var(--accent));padding:8px;box-shadow:0 6px 18px rgba(11,18,32,0.6);}
+.brand h1{margin:0;font-size:20px;letter-spacing:0.4px;}
+.brand p{margin:0;font-size:12px;color:var(--muted);}
+.nav{display:flex;gap:18px;align-items:center;}
+.nav a{color:var(--text);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;}
+.nav a:hover{background:rgba(255,255,255,0.03);}
+
+/* Hero */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:28px;
+  align-items:center;
+  margin-top:28px;
+  background:linear-gradient(135deg,#1E90FF,#4B0082);
+  text-align:center;
+  padding:150px 20px;
+}
+.hero h2{font-family:'Montserrat',sans-serif;margin:0 0 12px 0;font-size:50px;color:var(--text);}
+.hero p.lead{font-size:20px;margin-bottom:20px;color:var(--text);}
+.cta{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{
+  display:inline-block;
+  background-color:#FFD700;
+  color:#4B0082;
+  padding:12px 25px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+.btn:hover{background-color:#FFC107;}
+
+/* Cards & services */
+.services-grid, .quick-stats{display:flex;flex-wrap:wrap;gap:30px;margin-top:22px;justify-content:center;}
+.card, .hero-card, .service-card{
+  background-color:#1E90FF;
+  padding:25px;
+  border-radius:10px;
+  transition:transform 0.3s;
+}
+.card:hover, .service-card:hover, .hero-card:hover{transform:scale(1.05);}
+.service-card img{width:60px;margin-bottom:15px;}
+
+/* Sections */
+#services{background-color:#4B0082;padding:80px 20px;text-align:center;}
+#services h2{color:#FFD700;margin-bottom:50px;font-family:'Montserrat',sans-serif;}
+#about{background-color:#1E90FF;padding:80px 20px;text-align:center;}
+#about h2{color:#FFD700;font-family:'Montserrat',sans-serif;margin-bottom:20px;}
+#contact{background-color:#4B0082;padding:80px 20px;text-align:center;}
+#contact h2{color:#FFD700;margin-bottom:40px;font-family:'Montserrat',sans-serif;}
+#contact form{max-width:500px;margin:0 auto;display:flex;flex-direction:column;gap:15px;}
+#contact input, #contact textarea{padding:12px;border:none;border-radius:5px;}
+#contact button{background-color:#FFD700;color:#4B0082;border:none;padding:15px;font-weight:bold;cursor:pointer;border-radius:5px;transition:0.3s;}
+#contact button:hover{background-color:#FFC107;}
+
+/* Footer */
+footer{background-color:#1E90FF;text-align:center;padding:20px;}
+
+/* Responsive */
+@media (max-width:920px){
+  .hero{grid-template-columns:1fr;padding-bottom:8px;}
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:620px){
+  .nav{display:none;}
+  .services-grid{grid-template-columns:1fr;}
+  .brand h1{font-size:16px;}
+}
+
+/* Forms */
+form.field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;}
+input,textarea,select{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.05);background:transparent;color:var(--text);}
+textarea{min-height:120px;resize:vertical;}
+.small{font-size:13px;color:var(--muted);}
+
+/* Utility */
+.kv{display:flex;gap:10px;align-items:center;}
+.badge{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:8px;font-weight:700;}
